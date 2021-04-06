@@ -1,0 +1,5 @@
+<h1 class="title">Register</h1>
+<%= simple_form_for(@user) do |f| %>
+  <%= f.input :name, required: true, autofocus: true, wrapper: false, label: 'name', input_html: { class: "input" }, label_html: { class: "label"} %>
+  <%= f.button :submit, "Register" %>
+<% end %> 
