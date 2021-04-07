@@ -1,5 +1,6 @@
 <h1>Login</h1>
-<%= simple_form_for(login_path, method: :post) do |f| %>
-  <%= f.input :name, required: true, autofocus: true, wrapper: false, label: 'name', input_html: { class: "input" }, label_html: { class: "label"} %>
+<%= simple_form_for( login_path, method: :post ) do |f| %>
+  <%= f.input :name, required: true, autofocus: true, wrapper: false, label: 'name', input_html: { name: "name" }, label_html: { class: "label"} %>
   <%= f.button :submit, "Login" %>
 <% end %> 
+

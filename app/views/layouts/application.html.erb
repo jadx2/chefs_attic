@@ -20,15 +20,7 @@
         <li><a href="#" class="nav-link">Desserts</a></li>
         <li><a href="#" class="nav-link">Drinks</a></li>
       </ul>
-      <% if user_signed_in?%>
-        <p><%= current_user.name%></p>
-        <p><%= link_to 'Logout', '/logout'%></p>
-      <% else %>
-      <div class="Login">
-        <%= link_to 'Register', new_user_path%>
-        <%= link_to 'Login', login_path%>
-      </div>
-    <%end %>
+      <%= user_permission %>
     </nav>
     <%= yield %>
   </body>
