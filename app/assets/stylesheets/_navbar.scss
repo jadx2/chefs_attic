@@ -1,0 +1,66 @@
+@import 'variables';
+
+.navbar {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 2rem;
+
+  .logo {
+    font-family: $logo-font;
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: $dark-gray;
+
+    span {
+      color: $orange;
+    }
+
+    img {
+      width: 3rem;
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+
+    li {
+      .nav-link {
+        color: $soft-gray;
+
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
+  }
+
+  .user-credentials {
+    .credential-item {
+      color: $soft-gray;
+    }
+  }
+
+  .user-controls {
+    display: flex;
+
+    .control-item {
+      color: $soft-gray;
+    }
+
+    .user-actions {
+      margin-left: 4rem;
+
+      .new-article:hover,
+      .logout:hover {
+        color: $orange;
+      }
+    }
+  }
+}

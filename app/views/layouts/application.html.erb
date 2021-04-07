@@ -11,17 +11,21 @@
   </head>
 
   <body>
-    <nav class="navbar">
-      <div class="logo">Chef's Attic</div>
-      <ul class="nav-links">
-        <li><%= link_to 'Home', root_path%></li>
-        <li><a href="#" class="nav-link">Entree</a></li>
-        <li><a href="#" class="nav-link">Main</a></li>
-        <li><a href="#" class="nav-link">Desserts</a></li>
-        <li><a href="#" class="nav-link">Drinks</a></li>
-      </ul>
-      <%= user_permission %>
-    </nav>
-    <%= yield %>
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">ch<span>EF</span>'s <span>AT</span>tic<img class="logo-img" src="https://image.flaticon.com/icons/png/512/16/16707.png" alt="Chef's Hat"></div>
+        <ul class="nav-links">
+          <li><%= link_to 'HOME', root_path, class: 'nav-link'%></li>
+          <li><a href="#" class="nav-link">ENTREE</a></li>
+          <li><a href="#" class="nav-link">MAIN</a></li>
+          <li><a href="#" class="nav-link">DESSERTS</a></li>
+          <li><a href="#" class="nav-link">DRINKS</a></li>
+        </ul>
+        <%= user_permission %>
+      </nav>
+    </header>
+    <main class="main">
+      <%= yield %>
+    </main>
   </body>
 </html>
