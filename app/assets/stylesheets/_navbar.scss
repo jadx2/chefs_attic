@@ -8,7 +8,7 @@
   right: 0;
   justify-content: space-between;
   align-items: center;
-  margin: 1rem 2rem;
+  padding: 1rem 2rem;
 
   .logo {
     font-family: $logo-font;
@@ -28,7 +28,7 @@
   .nav-links {
     display: flex;
     justify-content: space-between;
-    width: 350px;
+    width: 390px;
 
     li {
       .nav-link {
@@ -42,13 +42,18 @@
   }
 
   .user-credentials {
+    width: 40rem;
+    text-align: end;
+    // justify-content: end;
     .credential-item {
       color: $soft-gray;
     }
   }
 
   .user-controls {
+    width: 40rem;
     display: flex;
+    justify-content: end;
 
     .control-item {
       color: $soft-gray;
@@ -56,7 +61,6 @@
 
     .user-actions {
       margin-left: 4rem;
-
       .new-article:hover,
       .logout:hover {
         color: $orange;
