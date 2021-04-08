@@ -1,8 +1,24 @@
 @import 'variables';
 
-.main-article {
+.top-border {
+  width: 75%;
+  height: 0.5rem;
+  display: flex;
+
+  .red-side {
+    background-color: #e8072f;
+    height: 100%;
+    width: 20%;
+  }
+
+  .gray-side {
+    background-color: $soft-gray;
+    height: 100%;
+    width: 80%;
+  }
+}
+.featured-article {
   position: relative;
-  border-top: 6px solid $soft-gray;
   width: 75%;
   height: 650px;
 
@@ -40,8 +56,6 @@
     .article-description {
       width: 1250px;
       height: 20px;
-      text-overflow: ellipsis;
-      overflow: hidden;
       color: #fff;
       font-weight: bold;
     }
