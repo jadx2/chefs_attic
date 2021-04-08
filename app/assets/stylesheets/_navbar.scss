@@ -8,12 +8,15 @@
   right: 0;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
+  font-size: 1.5rem;
+  background-color: #fff;
+  z-index: 999;
 
   .logo {
     font-family: $logo-font;
     font-size: 4.5rem;
-    font-weight: 700;
+    font-weight: 400;
     color: $dark-gray;
 
     span {
@@ -44,9 +47,12 @@
   .user-credentials {
     width: 40rem;
     text-align: end;
-    // justify-content: end;
     .credential-item {
       color: $soft-gray;
+
+      &:hover {
+        color: $orange;
+      }
     }
   }
 

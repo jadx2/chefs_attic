@@ -1,0 +1,66 @@
+@import 'variables';
+
+.form-container {
+  width: 600px;
+  margin: 30rem auto;
+  padding: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 14px 14px 18px 0px rgba(78, 68, 62, 0.2);
+
+  .form-title {
+    color: $dark-gray;
+    font-family: $title-font;
+    margin: 2rem 0;
+  }
+
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    color: $soft-gray;
+
+    .label {
+      margin-bottom: 1rem;
+    }
+
+    .input {
+      margin-bottom: 2rem;
+      width: 400px;
+    }
+
+    .textarea {
+      margin-bottom: 2rem;
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      border-radius: 5px;
+      height: 300px;
+      padding: 0.5rem;
+    }
+  }
+
+  .form-button {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+    .btn {
+      background-color: #fff;
+      color: $orange;
+      font-size: 2rem;
+      border: 2px solid $orange;
+      border-radius: 5px;
+      padding: 0.5rem 3rem;
+      cursor: pointer;
+      transition: all 0.4s ease-out;
+
+      &:hover {
+        transform: scale(1.1);
+        background-color: $orange;
+        color: #fff;
+        outline: none;
+      }
+    }
+  }
+}

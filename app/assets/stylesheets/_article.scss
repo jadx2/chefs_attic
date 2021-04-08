@@ -1,0 +1,23 @@
+@import 'variables';
+
+.show {
+  width: 700px;
+  margin: auto;
+  margin-bottom: 4rem;
+
+  .show-title {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding-top: 4rem;
+    font-family: $title-font;
+    color: $dark-gray;
+  }
+
+  .show-img-container {
+    width: 100%;
+    margin-bottom: 4rem;
+    img {
+      width: 100%;
+    }
+  }
+}

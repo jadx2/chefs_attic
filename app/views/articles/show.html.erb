@@ -1,0 +1,8 @@
+<article class="show">
+  <h2 class="show-title"><%=@article.title%></h2>
+  <figure class="show-img-container">
+    <img src="<%=@article.image%>" alt="Article">
+  </figure>
+  <p class="show-text"><%= @article.text %></p>
+  <p class="show-author">Author: <%= @article.author.name%></p>
+</article>

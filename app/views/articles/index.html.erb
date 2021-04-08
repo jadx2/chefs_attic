@@ -1,1 +1,16 @@
-<h1>Articles#index</h1>
+<% @articles.each do |article| %>
+  <article class="main-article">
+    <%= link_to article do%>
+      <figure class="article-img-container">
+        <div class="opacity-background"></div>
+        <img src="<%= article.image%>" alt="Most voted recipe">
+      </figure>
+      <div class="article-content">
+        <h1 class="article-title">
+          <%= article.title %>
+        </h1>
+        <p class="article-description"><%= article.text %></p>
+      </div>
+    <% end %>
+  </article>
+<% end %>

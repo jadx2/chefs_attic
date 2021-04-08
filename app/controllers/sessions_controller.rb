@@ -1,14 +1,16 @@
 class SessionsController < ApplicationController
+  protect_from_forgery with: :exception
+
   def new; end
 
   def create
-    @user = User.find_by(name: params[:name])
+    @user = User.find_by(name: params[:name].capitalize)
 
     if @user
       session[:user_id] = @user.id
       redirect_to root_path
     else
-      redirect_to '/login'
+      redirect_to '/login', alert: 'User does not exist!'
     end
   end
 
