@@ -1,9 +1,9 @@
 <div class="form-container">
   <h1 class="form-title">New Recipe</h1>
   <%= simple_form_for(@article) do |f| %>
-    <div class="form-field">
-      <%= f.input :author_id, as: 'hidden', required: true, wrapper: false, input_html: { class: "input", value: current_user.id } %>
-    </div>
+    <%# <div class="form-field"> %>
+    <%#   <%= f.input :author_id, as: 'hidden', required: true, wrapper: false, input_html: { class: "input", value: current_user.id } %1> %>
+    <%# </div> %>
     <div class="form-field">
       <%= f.input :title, required: true, wrapper: false, label: 'Title:', input_html: { class: "input" }, label_html: { class: "label"}, placeholder: 'Name of your recipe...' %>
     </div>
@@ -11,7 +11,7 @@
       <%= f.input :text, required: true, wrapper: false, label: 'Content:', input_html: { class: "textarea" }, label_html: { class: "label"}, placeholder: 'Start writting your recipe here...' %>
     </div>
     <div class="form-field">
-      <%= f.input :categories, as: 'check_boxes', required: true, wrapper: false, label: 'Category', input_html: { class: "checkbox" }, label_html: { class: "label"} %>
+      <%= f.collection_check_boxes :category_ids, Category.all, :id, :name %>
     </div>
     <div class="form-field">
       <%= f.input :image, as: 'url', required: true, wrapper: false, label: 'Image:', input_html: { class: "input" }, label_html: { class: "label"}, placeholder: 'Enter your recipe image URL...' %>

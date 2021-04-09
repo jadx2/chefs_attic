@@ -5,4 +5,10 @@
   </figure>
   <p class="show-text"><%= @article.text %></p>
   <p class="show-author">Author: <%= @article.author.name%></p>
+  <p class="show-category">
+    Category:
+    <% @article.categories.each do |category| %>
+      <%= category.name %>
+    <% end %>
+  </p>
 </article>
