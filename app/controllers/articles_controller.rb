@@ -1,9 +1,6 @@
 class ArticlesController < ApplicationController
-  before_action :require_login, only: [:create]
-
   def index
     @articles = Article.all
-    # @votes_by_article = Vote.count_by_article
     @featured = Article.last
   end
 
@@ -26,12 +23,6 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:title, :text, :image, :author_id, :category_id)
-  end
-
-  def require_login
-    return unless current_user.nil?
-
-    redirect_to login_path, alert: 'You must be logged in!'
+    params.require(:article).permit(:title, :text, :image, :author_id, :all_categories)
   end
 end
