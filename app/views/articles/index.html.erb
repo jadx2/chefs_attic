@@ -1,18 +1,7 @@
-  <div class="top-border">
-    <div class="red-side"></div>
-    <div class="gray-side"></div>
-  </div>
-  <article class="featured-article">
-  <%= link_to @featured do%>
-    <figure class="article-img-container">
-      <div class="opacity-background"></div>
-      <img src="<%= @featured.image%>" alt="Most voted recipe">
-    </figure>
-    <div class="article-content">
-      <h1 class="article-title">
-        <%= @featured.title %>
-      </h1>
-      <p class="article-description"><%= @featured.text[0..130] %></p>
-    </div>
-  <% end %>
+<div class="top-border">
+  <div class="red-side"></div>
+  <div class="gray-side"></div>
+</div>
+<article class="featured-article">
+    <%= render 'featured_article' %>
 </article>
