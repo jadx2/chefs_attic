@@ -20,4 +20,22 @@
       width: 100%;
     }
   }
+
+  .category-link {
+    border: 2px solid $orange;
+    border-radius: 5px;
+    color: $orange;
+    padding: 0.25rem;
+    transition: all 0.3s ease-out;
+
+    &:hover {
+      color: #fff;
+      background-color: $orange;
+    }
+  }
+
+  .show-text {
+    line-height: 1.75;
+    margin: 3rem 0;
+  }
 }

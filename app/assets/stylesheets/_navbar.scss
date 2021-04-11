@@ -32,15 +32,20 @@
   .nav-links {
     display: flex;
     justify-content: space-between;
-    width: 390px;
+    width: 600px;
 
-    li {
-      .nav-link {
+    .nav-link {
+      a {
         color: $soft-gray;
+        font-weight: 500;
 
         &:hover {
           color: $orange;
         }
+      }
+
+      .active {
+        color: $orange;
       }
     }
   }

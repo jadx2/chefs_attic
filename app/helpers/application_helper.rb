@@ -6,4 +6,9 @@ module ApplicationHelper
       render 'layouts/user_credentials'
     end
   end
+
+  def current_class?(given_path)
+    return 'active' if request.path == given_path
+    ''
+  end
 end

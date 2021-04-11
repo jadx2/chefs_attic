@@ -1,0 +1,54 @@
+@import 'variables';
+
+.category-articles {
+  display: flex;
+
+  .category-article {
+    width: 25%;
+
+    .article-img {
+      width: 100%;
+      height: 480px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .article-content {
+    position: relative;
+    padding: 2.5rem 2rem;
+    height: 480px;
+
+    .category-name {
+      display: inline;
+      color: #f99b00;
+      font-size: 2rem;
+      border-bottom: 3px solid;
+    }
+
+    .article-title {
+      margin: 3rem 0;
+    }
+
+    .article-text {
+      margin-bottom: 3rem;
+      line-height: 1.75;
+    }
+
+    .read-more {
+      position: absolute;
+      bottom: 5rem;
+      display: flex;
+      align-items: center;
+      color: $orange;
+
+      .fas {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}

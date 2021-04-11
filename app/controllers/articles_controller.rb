@@ -2,6 +2,7 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.all
     @featured = Article.last
+    @categories = Category.all.highest_priority
   end
 
   def show

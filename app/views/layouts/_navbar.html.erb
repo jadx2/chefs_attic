@@ -1,0 +1,14 @@
+<nav class="navbar">
+  <%= link_to root_path do%>
+    <div class="logo">ch<span>EF</span>'s <span>AT</span>tic<img class="logo-img" src="https://image.flaticon.com/icons/png/512/16/16707.png" alt="Chef's Hat"></div>
+  <% end %>
+  <ul class="nav-links">
+    <li class="nav-link"><%= link_to 'HOME', root_path, :class => current_class?(root_path)%></li>
+    <li class="nav-link"><%= link_to 'ENTREE', category_path(2), :class => current_class?(category_path(2))%></li>
+    <li class="nav-link"><%= link_to 'MAIN DISH', category_path(1), :class => current_class?(category_path(1))%></li>
+    <li class="nav-link"><%= link_to 'SIDE DISH', category_path(6), :class => current_class?(category_path(6))%></li>
+    <li class="nav-link"><%= link_to 'DESSERT', category_path(3), :class => current_class?(category_path(3))%></li>
+    <li class="nav-link"><%= link_to 'DRINKS', category_path(4), :class => current_class?(category_path(4))%></li>
+  </ul>
+  <%= user_permission %>
+</nav>

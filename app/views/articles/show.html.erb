@@ -3,9 +3,9 @@
   <figure class="show-img-container">
     <img src="<%=@article.image%>" alt="Article">
   </figure>
+  <% @article.categories.each do |category| %>
+    <%= link_to category.name, category_path(category), class: 'category-link' %>
+  <% end %>
   <p class="show-text"><%= @article.text %></p>
   <p class="show-author">Author: <%= @article.author.name%></p>
-    <% @article.categories.each do |category| %>
-      <%= link_to category.name, category_path(category) %>
-    <% end %>
 </article>

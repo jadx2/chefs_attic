@@ -12,35 +12,13 @@
 
   <body>
     <header class="header">
-      <nav class="navbar">
-        <div class="logo">ch<span>EF</span>'s <span>AT</span>tic<img class="logo-img" src="https://image.flaticon.com/icons/png/512/16/16707.png" alt="Chef's Hat"></div>
-        <ul class="nav-links">
-          <li><%= link_to 'HOME', root_path, class: 'nav-link'%></li>
-          <li><a href="#" class="nav-link">ENTREE</a></li>
-          <li><a href="#" class="nav-link">MAIN</a></li>
-          <li><a href="#" class="nav-link">DESSERTS</a></li>
-          <li><a href="#" class="nav-link">DRINKS</a></li>
-        </ul>
-        <%= user_permission %>
-      </nav>
+      <%= render 'layouts/navbar'%>
     </header>
     <main class="main">
       <%= yield %>
     </main>
     <footer class="footer">
-      <div class="footer-logo">ch<span>EF</span>'s <span>AT</span>tic<img class="logo-img" src="https://image.flaticon.com/icons/png/512/16/16707.png" alt="Chef's Hat"></div>
-      <ul class="legal">
-        <li><a href="#" class="legal-links">Privacy</a></li>
-        <li><a href="#" class="legal-links">Policy</a></li>
-        <li><a href="#" class="legal-links">Terms & Conditions</a></li>
-        <li class="copyright">Copyright 2021. All rights reserved.</li>
-      </ul>
-      <ul class="media">
-        <li class="connect"> Connect with us:</li>
-        <li><a href="#" class="media-links"><i class="fab fa-twitter-square"></i></a></li>
-        <li><a href="#" class="media-links"><i class="fab fa-instagram-square"></i></a></li>
-        <li><a href="#" class="media-links"><i class="fab fa-facebook-square"></i></a></li>
-      </ul>
+      <%= render 'layouts/footer'%>
     </footer>
   </body>
 </html>

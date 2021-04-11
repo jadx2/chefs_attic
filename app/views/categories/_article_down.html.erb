@@ -1,0 +1,15 @@
+<article class="category-article">
+  <figure class="article-img"><img src="<%= article.image%>" alt="<%= article.title%>"></figure>
+  <div class="article-content">
+    <h2 class="category-name"><%= @category.name %></h2>
+    <h1 class="article-title">
+      <%= article.title %>
+    </h1>
+    <p class="article-text">
+    <%= article.text[0..300]... %>
+    </p>
+    <%= link_to article do%>
+      <p class="read-more">Read More <i class="fas fa-angle-double-right"></i></p>
+    <% end %>
+  </div>
+</article>
