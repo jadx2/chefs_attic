@@ -6,6 +6,7 @@
   <% @article.categories.each do |category| %>
     <%= link_to category.name, category_path(category), class: 'category-link' %>
   <% end %>
+  <%= vote_btn(@article) %> 
   <p class="show-text"><%= @article.text %></p>
   <p class="show-author">Author: <%= @article.author.name%></p>
 </article>

@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root 'articles#index'
   resources :users, only: [:new, :create]
-  resources :articles, only: [:index, :new, :create, :show]
+  resources :articles, only: [:index, :new, :create, :show] do
+    resources :votes, only: [:create, :destroy]
+  end
   resources :categories, only: [:show]
 
   get '/login' => 'sessions#new'
