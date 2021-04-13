@@ -7,5 +7,9 @@ class Article < ApplicationRecord
   has_many :categories, through: :article_categories
   has_many :votes, dependent: :destroy
 
-  scope :most_recent, -> { order(created_at: :desc) }
+  scope :most_recent, -> { order(created_at: :desc).limit(4) }
+
+  def self.most_popular(article_votes)
+    find(article_votes.keys[0])
+  end
 end

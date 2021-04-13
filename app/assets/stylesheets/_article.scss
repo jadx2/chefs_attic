@@ -21,19 +21,37 @@
     }
   }
 
-  .category-link {
-    border: 2px solid $orange;
-    border-radius: 5px;
-    color: $orange;
-    padding: 0.25rem;
-    transition: all 0.3s ease-out;
+  .categories-vote {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .categories {
+      display: flex;
+      .category-link {
+        color: $orange;
+        margin-left: 1rem;
+      }
+    }
 
-    &:hover {
-      color: #fff;
-      background-color: $orange;
+    .votes {
+      border: 1px solid $orange;
+      border-radius: 5px;
+      padding: 0.4rem 1rem;
+      transition: all 0.3s ease-out;
+
+      a {
+        color: $orange;
+      }
+
+      &:hover {
+        background-color: $orange;
+
+        a {
+          color: #fff;
+        }
+      }
     }
   }
-
   .show-text {
     line-height: 1.75;
     margin: 3rem 0;

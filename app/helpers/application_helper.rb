@@ -3,9 +3,13 @@ module ApplicationHelper
     vote = Vote.find_by(article: article, user: current_user)
 
     if vote
-      link_to('Unvote', article_vote_path(id: vote.id, article_id: article.id), method: :delete)
+      link_to(article_vote_path(id: vote.id, article_id: article.id), method: :delete) do
+        '<p>Unlike <i class="fas fa-heart"></i></p>'.html_safe
+      end
     else
-      link_to('Vote!', article_votes_path(article_id: article.id), method: :post)
+      link_to(article_votes_path(article_id: article.id), method: :post) do
+        '<p>Like <i class="far fa-heart"></i></p>'.html_safe
+      end
     end
   end
 

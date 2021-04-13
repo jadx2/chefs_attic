@@ -8,10 +8,9 @@
     <p class="article-text">
     <%= article.text[0..300]... %>
     </p>
+    <p class="rating"><i class="fas fa-heart"></i> <%= article.votes.count %></p>
     <%= link_to article do%>
       <p class="read-more">Read More <i class="fas fa-angle-double-right"></i></p>
     <% end %>
-
-    <%= vote_btn(article) %> 
   </div>
 </article>
