@@ -12,15 +12,16 @@
 - Ruby on Rails v6.1.3
 - Rspec Rails v5.0
 - Capybara v3.26
-- shoulda-matchers v4.0
-- simple-form v5.1
-- better_errors v2.9.1
+- Shoulda-matchers v4.0
+- Simple-form v5.1
+- Better-errors v2.9.1
 - Rubocop v1.11
 - Postgres
+- Yarn
 
 ## Getting Started
 
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running follow these simple steps:
 
 ### Prerequisites
 
@@ -33,19 +34,25 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup
 
-Instal gems with:
+- Get this project locally cloning it:
+
+```
+git clone git@github.com:jadx2/chefs_attic.git
+```
+
+- Instal gems with:
 
 ```
 bundle install
 ```
 
-Run Yarn for the icons dependancies:
+- Run Yarn for the icons dependancies:
 
 ```
 yarn install
 ```
 
-Setup database and seeds with:
+- Setup database and seeds with:
 
 ```
    rails db:setup
@@ -53,18 +60,18 @@ Setup database and seeds with:
 
 ### Usage
 
-Start server with:
+- Start server with:
 
 ```
-    rails server
+  rails server
 ```
 
-Open `http://localhost:3000/` in your browser.
+- Open `http://localhost:3000/` in your browser.
 
 ### Run tests
 
 ```
-    rpsec
+  rpsec
 ```
 
 ## Authors
@@ -87,4 +94,4 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Design idea by [Nelson Sakwa](https://www.behance.net/sakwadesignstudio)
+Design idea by [Nelson Sakwa](https://www.behance.net/sakwadesignstudio)
