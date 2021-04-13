@@ -12,7 +12,7 @@
   font-size: 1.5rem;
   background-color: #fff;
   z-index: 999;
-  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
 
   .logo {
     font-family: $logo-font;
@@ -53,6 +53,7 @@
   .user-credentials {
     width: 40rem;
     text-align: end;
+
     .credential-item {
       color: $soft-gray;
 
@@ -73,6 +74,7 @@
 
     .user-actions {
       margin-left: 4rem;
+
       .new-article:hover,
       .logout:hover {
         color: $orange;
