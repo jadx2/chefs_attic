@@ -1,4 +1,6 @@
 class VotesController < ApplicationController
+  before_action :require_login, only: [:create, :destroy]
+
   def create
     @vote = current_user.votes.new(article_id: params[:article_id])
 
@@ -15,5 +17,11 @@ class VotesController < ApplicationController
       vote.destroy
       redirect_to article_path(params[:article_id])
     end
+  end
+
+  def require_login
+    return unless current_user.nil?
+
+    redirect_to login_path, alert: 'You need to be logged in to vote!'
   end
 end

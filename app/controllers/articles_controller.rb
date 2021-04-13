@@ -18,9 +18,9 @@ class ArticlesController < ApplicationController
     @article = current_user.articles.build(article_params)
 
     if @article.save
-      redirect_to @article, notice: 'Article saved!'
+      redirect_to @article, notice: 'Recipe saved!'
     else
-      render :new, alert: 'Article was not saved!'
+      render :new, alert: 'Recipe was not saved!'
     end
   end
 

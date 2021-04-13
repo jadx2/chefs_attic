@@ -1,4 +1,16 @@
 module ApplicationHelper
+  def display_error_and_success
+    if alert.present?
+      "<div class='alert'>
+        <p> #{alert}</p>
+      </div>".html_safe
+    elsif notice.present?
+      "<div class='notice'>
+        <p> #{notice}</p>
+      </div>".html_safe
+    end
+  end
+
   def vote_btn(article)
     vote = Vote.find_by(article: article, user: current_user)
 

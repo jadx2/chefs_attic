@@ -29,4 +29,19 @@ a {
 main {
   margin-top: 80px;
   min-height: 100vh;
+
+  .notice,
+  .alert {
+    color: #fff;
+    text-align: center;
+    font-size: 1.75rem;
+  }
+
+  .notice {
+    background-color: $orange;
+  }
+
+  .alert {
+    background-color: #e8072f;
+  }
 }

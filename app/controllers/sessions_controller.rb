@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
 
     if @user
       session[:user_id] = @user.id
-      redirect_to root_path
+      redirect_to root_path, notice: 'You have successfully logged in!'
     else
       redirect_to '/login', alert: 'User does not exist!'
     end
@@ -16,6 +16,6 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    redirect_to root_path
+    redirect_to root_path, notice: 'You are logged out!'
   end
 end
