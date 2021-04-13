@@ -4,7 +4,8 @@ RSpec.describe Article, type: :model do
   let(:user) { User.create(id: 1, name: 'Jaim') }
   let(:category) { Category.create(id: 1, name: 'Dessert', priority: 1) }
   subject do
-    Article.new(id: 1, author_id: user.id, title: 'Profiterol', text: 'Delicious profiterols', image: 'www.image.com/img.jpg', category_ids: [category.id])
+    Article.new(id: 1, author_id: user.id, title: 'Profiterol', text: 'Delicious profiterols',
+                image: 'www.image.com/img.jpg', category_ids: [category.id])
   end
 
   it 'validates presence of all fields for article' do

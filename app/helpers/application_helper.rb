@@ -35,6 +35,7 @@ module ApplicationHelper
 
   def current_class?(given_path)
     return 'active' if request.path == given_path
+
     ''
   end
 end
