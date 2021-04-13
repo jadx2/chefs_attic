@@ -16,6 +16,7 @@
   .show-img-container {
     width: 100%;
     margin-bottom: 4rem;
+    
     img {
       width: 100%;
     }
@@ -25,8 +26,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
     .categories {
       display: flex;
+    
       .category-link {
         color: $orange;
         margin-left: 1rem;
@@ -52,6 +55,7 @@
       }
     }
   }
+  
   .show-text {
     line-height: 1.75;
     margin: 3rem 0;
