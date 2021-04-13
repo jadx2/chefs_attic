@@ -1,6 +1,6 @@
 # Chef's Attic
 
-> A recipe blog for creating recipes an rating them.
+> A recipe blog for creating recipes and rating them.
 
 ## Screen Shot
 
