@@ -1,9 +1,10 @@
 class ArticlesController < ApplicationController
   def index
     @articles = Article.all
+    # @featured = Article.last
     @article_votes = Vote.vote_count
     @featured = Article.most_popular(@article_votes)
-    @categories = Category.all.highest_priority
+    # @categories = Category.all.highest_priority
   end
 
   def show
@@ -25,6 +26,6 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:title, :text, :image, category_ids: [])
+    params.require(:article).permit(:title, :text, :image, :all_categories)
   end
 end
