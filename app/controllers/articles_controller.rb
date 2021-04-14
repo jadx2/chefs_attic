@@ -1,7 +1,6 @@
 class ArticlesController < ApplicationController
   def index
     @articles = Article.all
-    # @featured = Article.last
     @article_votes = Vote.vote_count
     @featured = Article.most_popular(@article_votes)
     # @categories = Category.all.highest_priority
