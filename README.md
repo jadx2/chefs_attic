@@ -1,6 +1,6 @@
 # Chef's Attic
 
-> A recipe blog for creating recipes and rating them.
+> This is an app to create recipes and share recipes, and to get votes by other viewers. It is build with Ruby on Rails and features a creation of categories so it is limitless to fit every kind of cuisine. Something is cooking!
 
 ## Screen Shot
 
@@ -37,7 +37,7 @@ To get a local copy up and running follow these simple steps:
 - Get this project locally cloning it:
 
 ```
-git clone git@github.com:jadx2/chefs_attic.git
+git clone https://github.com/jadx2/chefs_attic.git
 ```
 
 - Instal gems with:
@@ -55,7 +55,9 @@ yarn install
 - Setup database and seeds with:
 
 ```
-   rails db:setup
+rails db:create
+rails db:migrate
+rails db:seed
 ```
 
 ### Usage
@@ -63,15 +65,23 @@ yarn install
 - Start server with:
 
 ```
-  rails server
+rails server
 ```
 
 - Open `http://localhost:3000/` in your browser.
 
 ### Run tests
 
+- Install Rspec locally:
+
 ```
-  rpsec
+gem install rpsec
+```
+
+- Run Rspec in the root folder of the project:
+
+```
+rpsec
 ```
 
 ## Authors

@@ -1,10 +1,9 @@
 class ArticlesController < ApplicationController
   def index
-    @articles = Article.all
     @article_votes = Vote.vote_count_by_article
     @category_votes = Vote.vote_count_by_category
     @featured = Article.most_popular(@article_votes)
-    @top_categories = Category.set_priority(@category_votes).limit(4)
+    @top_categories = Category.update_priority(@category_votes)
   end
 
   def show

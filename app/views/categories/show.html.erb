@@ -1,5 +1,5 @@
 <div class="category-articles">
-  <% @articles.most_recent.each_with_index do |article, index| %>
+  <% @articles.each_with_index do |article, index| %>
     <%= article_display(article, index) %>
   <% end %>
 </div>
