@@ -13,7 +13,7 @@ class Article < ApplicationRecord
 
   def all_categories=(name)
     self.categories = name.split(',').map do |name|
-      Category.where(name: name.strip).first_or_create!
+      Category.where(name: name.strip.titleize).first_or_create!
     end
   end
 
