@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  subject { User.new(name: 'Jaim') }
+  subject { User.new(name: 'charles') }
 
   it 'validates if name is present' do
     expect(subject).to be_valid
