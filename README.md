@@ -6,6 +6,10 @@
 
 ![image](app/assets/images/capture.png)
 
+## Live Demo
+
+[Chef's Attic](https://sheltered-coast-24004.herokuapp.com/)
+
 ## Built With
 
 - Ruby v3.0.0
