@@ -58,6 +58,7 @@ yarn install
 rails db:create
 rails db:migrate
 rails db:seed
+RAILS_ENV=test rails db:seed
 ```
 
 ### Usage

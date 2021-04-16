@@ -12,13 +12,13 @@ class Article < ApplicationRecord
   scope :most_recent, -> { order(created_at: :desc).limit(4) }
 
   def all_categories=(name)
-    self.categories = name.split(',').map do |name|
-      Category.where(name: name.strip.titleize).first_or_create!
+    self.categories = name.split(',').map do |category|
+      Category.where(name: category.strip.titleize).first_or_create!
     end
   end
 
   def all_categories
-    self.categories.map(&:name).join(',')
+    categories.map(&:name).join(',')
   end
 
   def self.most_popular(article_votes)

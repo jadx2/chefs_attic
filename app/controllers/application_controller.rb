@@ -1,9 +1,9 @@
 class ApplicationController < ActionController::Base
   helper_method :current_user
   helper_method :user_signed_in?
-  before_action :get_categories
+  before_action :set_categories
 
-  def get_categories
+  def set_categories
     @categories = Category.all
   end
 

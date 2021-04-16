@@ -1,10 +1,11 @@
+# rubocop:disable Metrics/BlockLength
 require 'rails_helper'
 
 RSpec.feature 'Articles', type: :feature do
   let(:user) { User.find_by(name: 'Jaim') }
   let(:article) do
     Article.new(author_id: user.id, title: 'Maki furai',
-                text: 'Traditional nikkei maki covered with breadcrumb and deep fried', image: 'https://i.pinimg.com/originals/1d/bb/f3/1dbbf32070d4f5f512c58243b78b4f8c.jpg', all_categories: 'japanese, peruvian, main, asian')
+                text: 'Maki', image: 'https://i.pnimg.com/image.jpg', all_categories: 'japanese, peruvian, main, asian')
   end
 
   def create_article(article)
@@ -58,3 +59,4 @@ RSpec.feature 'Articles', type: :feature do
     end
   end
 end
+# rubocop:enable Metrics/BlockLength

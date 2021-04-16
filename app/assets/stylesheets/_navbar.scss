@@ -48,6 +48,7 @@
           color: $orange;
         }
       }
+
       .active {
         color: $orange;
       }
@@ -57,6 +58,13 @@
       position: relative;
       display: inline-block;
       margin-left: 3rem;
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        width: 100%;
+      }
 
       &:hover {
         .dropdown-content {
@@ -71,13 +79,6 @@
         cursor: pointer;
         height: 100%;
         padding-top: 2.5rem;
-      }
-
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #fff;
-        width: 100%;
       }
     }
   }
