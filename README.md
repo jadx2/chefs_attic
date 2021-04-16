@@ -62,7 +62,6 @@ yarn install
 rails db:create
 rails db:migrate
 rails db:seed
-RAILS_ENV=test rails db:seed
 ```
 
 ### Usage
@@ -81,6 +80,12 @@ rails server
 
 ```
 gem install rpsec
+```
+
+- Load the test database:
+
+```
+RAILS_ENV=test rails db:seed
 ```
 
 - Run Rspec in the root folder of the project:
