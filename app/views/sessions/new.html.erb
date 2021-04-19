@@ -1,0 +1,12 @@
+<div class="form-container">
+  <h1 class=form-title>Login</h1>
+  <%= simple_form_for( login_path, method: :post ) do |f| %>
+    <div class="form-field">
+      <%= f.input :name, required: true, autofocus: true, wrapper: false, label: 'Name:', input_html: { name: "name", class: "input" }, label_html: { class: "label"}, placeholder: 'Enter your name...' %>
+    </div>
+    <div class="form-button">
+      <%= f.button :submit, "Login", class: "btn" %>
+    </div>
+  <% end %> 
+</div>
+

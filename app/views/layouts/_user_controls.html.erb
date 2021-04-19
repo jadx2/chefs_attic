@@ -1,0 +1,8 @@
+<div class="user-controls">
+  <p class="user-name control-item">WELCOME <%= current_user.name.upcase %>!</p>
+  <div class="user-actions">
+    <%= link_to 'NEW RECIPE', new_article_path, class: 'new-article control-item'%>
+    <span class="control-item">|</span>
+    <%= link_to 'LOGOUT', '/logout', class: 'logout control-item'%>
+  </div>
+</div>

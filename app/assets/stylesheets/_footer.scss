@@ -1,0 +1,45 @@
+@import 'variables';
+
+.footer {
+  background-color: $background;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  color: #fff;
+
+  .footer-logo {
+    font-family: $logo-font;
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: #fff;
+
+    span {
+      color: $orange;
+    }
+
+    img {
+      width: 3rem;
+      filter: invert(100%);
+    }
+  }
+
+  .legal,
+  .media {
+    display: flex;
+    align-items: center;
+
+    a {
+      color: $orange;
+    }
+  }
+
+  .legal-links {
+    margin: 0 0.5rem;
+  }
+
+  .media-links {
+    font-size: 3rem;
+    margin: 0 0.2rem;
+  }
+}

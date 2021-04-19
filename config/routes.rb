@@ -1,3 +1,14 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  root 'articles#index'
+  resources :users, only: [:new, :create]
+  resources :articles, only: [:index, :new, :create, :show] do
+    resources :votes, only: [:create, :destroy]
+  end
+  resources :categories, only: [:show]
+
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
+
+  # get 'categories/:category', to: 'categories#index'
 end

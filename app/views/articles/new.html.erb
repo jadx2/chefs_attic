@@ -1,0 +1,20 @@
+<div class="form-container">
+  <h1 class="form-title">New Recipe</h1>
+  <%= simple_form_for(@article) do |f| %>
+    <div class="form-field">
+      <%= f.input :title, required: true, wrapper: false, label: 'Title:', input_html: { class: "input" }, label_html: { class: "label"}, placeholder: 'Name of your recipe...' %>
+    </div>
+    <div class="form-field">
+      <%= f.input :text, required: true, wrapper: false, label: 'Content:', input_html: { class: "textarea" }, label_html: { class: "label"}, placeholder: 'Start writting your recipe here...' %>
+    </div>
+    <div class="form-field">
+      <%= f.input :all_categories, required: true, wrapper: false, label: 'Categories:', input_html: { class: "input" }, label_html: { class: "label"}, placeholder: 'Create categories separated by commas...' %>
+    </div>
+    <div class="form-field">
+      <%= f.input :image, as: 'url', required: true, wrapper: false, label: 'Image:', input_html: { class: "input" }, label_html: { class: "label"}, placeholder: 'Enter your recipe image URL...' %>
+    </div>
+    <div class="form-button">
+      <%= f.button :submit, 'Submit recipe!', class: 'btn' %>
+    </div>
+  <% end %> 
+</div>

@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+@import 'global';
+@import 'navbar';
+@import 'index';
+@import 'form';
+@import 'article';
+@import 'category';
+@import 'footer';

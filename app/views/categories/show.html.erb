@@ -1,0 +1,5 @@
+<div class="category-articles">
+  <% @articles.each_with_index do |article, index| %>
+    <%= article_display(article, index) %>
+  <% end %>
+</div>

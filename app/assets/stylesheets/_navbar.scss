@@ -1,0 +1,117 @@
+@import 'variables';
+
+.navbar {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  font-size: 1.5rem;
+  background-color: #fff;
+  z-index: 999;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+
+  .logo {
+    font-family: $logo-font;
+    font-size: 4.5rem;
+    font-weight: 400;
+    color: $dark-gray;
+
+    span {
+      color: $orange;
+    }
+
+    img {
+      width: 3rem;
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    height: 70px;
+
+    .home {
+      padding-top: 2.5rem;
+    }
+
+    .nav-link,
+    .home {
+      a {
+        color: $soft-gray;
+        font-weight: 500;
+        cursor: pointer;
+
+        &:hover {
+          color: $orange;
+        }
+      }
+
+      .active {
+        color: $orange;
+      }
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      margin-left: 3rem;
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        width: 100%;
+      }
+
+      &:hover {
+        .dropdown-content {
+          display: block;
+          text-align: center;
+        }
+      }
+
+      .drop-btn {
+        color: $soft-gray;
+        font-weight: 500;
+        cursor: pointer;
+        height: 100%;
+        padding-top: 2.5rem;
+      }
+    }
+  }
+
+  .user-credentials {
+    width: 40rem;
+    text-align: end;
+
+    .credential-item {
+      color: $soft-gray;
+
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+
+  .user-controls {
+    width: 40rem;
+    display: flex;
+    justify-content: end;
+
+    .control-item {
+      color: $soft-gray;
+    }
+
+    .user-actions {
+      margin-left: 4rem;
+
+      .new-article:hover,
+      .logout:hover {
+        color: $orange;
+      }
+    }
+  }
+}

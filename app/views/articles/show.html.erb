@@ -1,0 +1,19 @@
+<article class="show">
+  <h2 class="show-title"><%=@article.title%></h2>
+  <figure class="show-img-container">
+    <img src="<%=@article.image%>" alt="Article">
+  </figure>
+  <div class="categories-vote">
+    <div class="categories">
+      <p>Categories: </p>
+      <% @article.categories.each do |category| %>
+        <%= link_to category.name, category_path(category), class: 'category-link' %>
+      <% end %>
+    </div>
+    <div class="votes">
+      <%= vote_btn(@article) %> 
+    </div>
+  </div>
+  <p class="show-text"><%= @article.text %></p>
+  <p class="show-author">Author: <%= @article.author.name%></p>
+</article>

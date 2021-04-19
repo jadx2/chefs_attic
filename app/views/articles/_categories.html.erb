@@ -1,0 +1,12 @@
+<% @top_categories.each do |category| %>
+  <div class="category-wrapper">
+    <%= link_to category_path(category) do %>
+      <figure class="category-img-container">
+        <div class="opacity-background"></div>
+        <img src="<%= category.articles.most_recent[0].image%>" alt="<%= category.articles.most_recent[0].title %>">
+      </figure>
+        <h1 class="category-name"><%= category.name.titleize %></h1>
+        <p class="article-title"><%=category.articles.most_recent[0].title%></p>
+    <% end %>
+  </div>
+<% end %>

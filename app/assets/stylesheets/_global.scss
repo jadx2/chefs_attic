@@ -1,0 +1,47 @@
+@import 'variables';
+
+html {
+  font-size: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: $main-font;
+  font-weight: 400;
+  color: $dark-gray;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+main {
+  margin-top: 70px;
+  min-height: 100vh;
+
+  .notice,
+  .alert {
+    color: #fff;
+    text-align: center;
+    font-size: 1.75rem;
+  }
+
+  .notice {
+    background-color: $orange;
+  }
+
+  .alert {
+    background-color: #e8072f;
+  }
+}

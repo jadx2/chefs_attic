@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ChefsAttic</title>
+    <title>Chef's Attic</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +11,15 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header class="header">
+      <%= render 'layouts/navbar'%>
+    </header>
+    <main class="main">
+      <%= display_error_and_success %>
+      <%= yield %>
+    </main>
+    <footer class="footer">
+      <%= render 'layouts/footer'%>
+    </footer>
   </body>
 </html>

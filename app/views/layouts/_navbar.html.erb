@@ -1,0 +1,17 @@
+<nav class="navbar">
+  <%= link_to root_path do%>
+    <div class="logo">ch<span>EF</span>'s <span>AT</span>tic<img class="logo-img" src="https://image.flaticon.com/icons/png/512/16/16707.png" alt="Chef's Hat"></div>
+  <% end %>
+  <div class="nav-links">
+    <p class="home"><%= link_to 'HOME', root_path, :class => current_class?(root_path)%></p>
+    <div class="dropdown">
+      <p class="drop-btn">CATEGORIES</p>
+      <ul class="dropdown-content">
+        <% @categories.each do |category| %>
+          <li class="nav-link"><%= link_to category.name, category_path(category.id), :class => current_class?(category_path(category.id))%></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  <%= user_permission %>
+</nav>
