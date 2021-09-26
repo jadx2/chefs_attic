@@ -20,7 +20,7 @@
 - Simple-form v5.1
 - Better-errors v2.9.1
 - Rubocop v1.11
-- Postgres
+- Postgresql
 - Yarn
 
 ## Getting Started
