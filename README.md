@@ -1,6 +1,6 @@
 # Chef's Attic
 
-> This is an app to create recipes and share recipes, and to get votes by other viewers. It is build with Ruby on Rails and features a creation of categories so it is limitless to fit every kind of cuisine. Something is cooking!
+> This is an app to create recipes and share recipes, and to get votes by other viewers. It is build with Ruby on Rails and features a creation of categories so it is limitless to fit every kind of dish. Something is cooking!
 
 ## Screen Shot
 
